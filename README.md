@@ -4,6 +4,8 @@ A swipe-to-dismiss component for [Expo UI](https://docs.expo.dev/versions/latest
 
 This is a community-built extension that provides a `SwipeToDismissBox` component matching the [Jetpack Compose SwipeToDismissBox](https://developer.android.com/develop/ui/compose/touch-input/user-interactions/swipe-to-dismiss) API. It uses a custom gesture implementation instead of Material 3's `SwipeToDismissBox` to work around [a bug](https://issuetracker.google.com/issues/471021165) where `positionalThreshold` is silently ignored.
 
+https://github.com/user-attachments/assets/0063e478-8f14-4643-9987-647de58e5090
+
 ## Platform Support
 
 **Android only.** This component uses Jetpack Compose and has no iOS equivalent.
