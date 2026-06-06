@@ -37,8 +37,8 @@
   },
   "homepage": "https://github.com/benjaminkomen/expo-ui-swipe-to-dismiss-box#readme",
   "peerDependencies": {
-    "expo": ">=52.0.0",
     "@expo/ui": ">=0.6.0",
+    "expo": ">=52.0.0",
     "react": "*",
     "react-native": "*"
   },
@@ -47,25 +47,42 @@
     "@commitlint/config-conventional": "^21.0.0",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
+    "@types/react": "^19.2.17",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "expo": "^56.0.9",
     "expo-module-scripts": "~56.0.0",
     "husky": "^9.0.0",
+    "react": "^19.2.7",
+    "react-native": "^0.85.3",
     "semantic-release": "^25.0.0",
     "typescript": "~5.9.2"
   },
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      ["@semantic-release/changelog", { "changelogTitle": "# Changelog" }],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogTitle": "# Changelog"
+        }
+      ],
       "@semantic-release/github",
       "@semantic-release/npm",
-      ["@semantic-release/git", {
-        "assets": ["package.json", "CHANGELOG.md"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }]
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ]
   },
   "config": {
