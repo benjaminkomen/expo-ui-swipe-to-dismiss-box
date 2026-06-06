@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "platforms": ["android"],
     "android": {
-      "package": "com.example.swipetodismissbox"
+      "package": "com.benjaminkomen.swipetodismissboxexample"
     }
   }
 }

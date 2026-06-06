@@ -31,6 +31,7 @@ import expo.modules.ui.ModifierList
 import expo.modules.ui.ModifierRegistry
 import expo.modules.ui.findChildSlotView
 import expo.modules.ui.isSlotView
+import expo.modules.ui.renderSlot
 import kotlin.math.abs
 import kotlin.math.roundToInt
 import kotlinx.coroutines.launch
