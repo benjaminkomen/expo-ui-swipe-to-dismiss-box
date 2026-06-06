@@ -13,7 +13,11 @@ class ExpoUISwipeToDismissBoxModule : Module() {
       val onEndToStart by Event<Unit>()
 
       Content { props ->
-        SwipeToDismissBoxContent(props, { onStartToEnd(Unit) }, { onEndToStart(Unit) })
+        SwipeToDismissBoxContent(
+          props,
+          onStartToEnd = { emitViewEvent(view, "onStartToEnd") },
+          onEndToStart = { emitViewEvent(view, "onEndToStart") }
+        )
       }
     }
   }

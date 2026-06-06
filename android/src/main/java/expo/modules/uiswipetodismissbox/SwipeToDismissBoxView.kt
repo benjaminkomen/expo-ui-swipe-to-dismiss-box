@@ -32,6 +32,7 @@ import expo.modules.ui.ModifierRegistry
 import expo.modules.ui.findChildSlotView
 import expo.modules.ui.isSlotView
 import expo.modules.ui.renderSlot
+import android.util.Log
 import kotlin.math.abs
 import kotlin.math.roundToInt
 import kotlinx.coroutines.launch
@@ -110,16 +111,22 @@ fun FunctionalComposableScope.SwipeToDismissBoxContent(
               val currentOffset = offsetX.value
 
               scope.launch {
+                Log.d("SwipeToDismiss", "onDragEnd: width=$width, offset=$currentOffset, threshold=${currentThreshold.value}")
                 if (width > 0 && abs(currentOffset) >= width * currentThreshold.value) {
                   val target = if (currentOffset > 0) width.toFloat() else -width.toFloat()
+                  Log.d("SwipeToDismiss", "Threshold exceeded, animating to $target")
                   offsetX.animateTo(target, tween(200))
 
                   if (isStartToEnd(currentOffset)) {
+                    Log.d("SwipeToDismiss", "Firing onStartToEnd event")
                     currentOnStartToEnd.value()
                   } else {
+                    Log.d("SwipeToDismiss", "Firing onEndToStart event")
                     currentOnEndToStart.value()
                   }
+                  Log.d("SwipeToDismiss", "Event fired successfully")
                 } else {
+                  Log.d("SwipeToDismiss", "Below threshold, snapping back")
                   offsetX.animateTo(0f, spring(stiffness = Spring.StiffnessMediumLow))
                 }
               }
