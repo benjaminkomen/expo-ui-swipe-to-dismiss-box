@@ -13,11 +13,11 @@ class ExpoUISwipeToDismissBoxModule : Module() {
       val onEndToStart by Event<Unit>()
 
       Content { props ->
-        SwipeToDismissBoxContent(
-          props,
-          onStartToEnd = { emitViewEvent(view, "onStartToEnd") },
-          onEndToStart = { emitViewEvent(view, "onEndToStart") }
-        )
+        // BUG REPRODUCTION: Using the standard Event<Unit>() DSL.
+        // Events are silently dropped because ViewEvent validation in
+        // expo-modules-core resolves the wrong module holder when multiple
+        // modules register Compose views (all share ComposeFunctionHolder class).
+        SwipeToDismissBoxContent(props, { onStartToEnd(Unit) }, { onEndToStart(Unit) })
       }
     }
   }
