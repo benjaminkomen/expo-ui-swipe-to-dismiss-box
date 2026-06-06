@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+android/build/
+android/.gradle/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Expo
+.expo/
+
+# Example app
+example/node_modules/
+example/android/
+example/ios/
+example/.expo/

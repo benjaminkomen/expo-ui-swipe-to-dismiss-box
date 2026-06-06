@@ -1,0 +1,76 @@
+{
+  "name": "expo-ui-swipe-to-dismiss-box",
+  "version": "0.0.0-development",
+  "description": "A swipe-to-dismiss component for Expo UI (Jetpack Compose) with reliable threshold control",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    }
+  },
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "commit": "cz"
+  },
+  "keywords": [
+    "expo",
+    "expo-ui",
+    "jetpack-compose",
+    "swipe-to-dismiss",
+    "android",
+    "react-native"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benjaminkomen/expo-ui-swipe-to-dismiss-box.git"
+  },
+  "author": "Benjamin Komen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminkomen/expo-ui-swipe-to-dismiss-box/issues"
+  },
+  "homepage": "https://github.com/benjaminkomen/expo-ui-swipe-to-dismiss-box#readme",
+  "peerDependencies": {
+    "expo": ">=52.0.0",
+    "@expo/ui": ">=0.6.0",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "expo-module-scripts": "~56.0.0",
+    "husky": "^9.0.0",
+    "semantic-release": "^25.0.0",
+    "typescript": "~5.9.2"
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/changelog", { "changelogTitle": "# Changelog" }],
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      ["@semantic-release/git", {
+        "assets": ["package.json", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }]
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

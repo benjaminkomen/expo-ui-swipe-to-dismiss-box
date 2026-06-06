@@ -1,0 +1,23 @@
+# Source (TypeScript sources are compiled to build/)
+# Keep src/ for source maps
+
+# Example app
+example/
+
+# Development config
+.github/
+.husky/
+.idea/
+.vscode/
+commitlint.config.js
+
+# Build artifacts
+android/build/
+android/.gradle/
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store

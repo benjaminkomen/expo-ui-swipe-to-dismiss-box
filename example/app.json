@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "SwipeToDismissBox Example",
+    "slug": "expo-ui-swipe-to-dismiss-box-example",
+    "version": "1.0.0",
+    "platforms": ["android"],
+    "android": {
+      "package": "com.example.swipetodismissbox"
+    }
+  }
+}

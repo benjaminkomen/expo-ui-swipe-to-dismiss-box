@@ -1,0 +1,20 @@
+{
+  "name": "expo-ui-swipe-to-dismiss-box-example",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android"
+  },
+  "dependencies": {
+    "@expo/ui": "~0.6.0",
+    "expo": "~52.0.0",
+    "expo-ui-swipe-to-dismiss-box": "../",
+    "react": "^19.0.0",
+    "react-native": "~0.77.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2"
+  }
+}
