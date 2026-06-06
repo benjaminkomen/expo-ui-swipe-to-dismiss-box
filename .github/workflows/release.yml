@@ -25,7 +25,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
       - name: Install dependencies
         run: yarn install
       - name: Build
@@ -33,5 +34,4 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
         run: npx semantic-release
