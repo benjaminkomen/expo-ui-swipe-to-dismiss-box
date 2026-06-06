@@ -1,6 +1,6 @@
 {
   "name": "expo-ui-swipe-to-dismiss-box",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A swipe-to-dismiss component for Expo UI (Jetpack Compose) with reliable threshold control",
   "main": "build/index.js",
   "types": "build/index.d.ts",
