@@ -8,10 +8,11 @@
     "android": "expo run:android"
   },
   "dependencies": {
+    "@expo/material-symbols": "^0.1.1",
     "@expo/ui": "latest",
     "expo": "~56.0.0",
     "expo-ui-swipe-to-dismiss-box": "link:..",
-    "react": "^19.2.0",
+    "react": "19.2.3",
     "react-native": "~0.85.0"
   },
   "devDependencies": {
