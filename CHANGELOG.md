@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/benjaminkomen/expo-ui-swipe-to-dismiss-box/compare/v1.0.0...v1.0.1) (2026-06-06)
+
+
+### Bug Fixes
+
+* bypass expo-modules-core event dispatch bug for Compose views ([d0fab55](https://github.com/benjaminkomen/expo-ui-swipe-to-dismiss-box/commit/d0fab55b5319a11e01215d6acadb532a8383b396))
+
 # 1.0.0 (2026-06-06)
 
 
